@@ -18,6 +18,11 @@ pub mod custom;
 pub mod fmt;
 pub mod format;
 pub mod interactivity;
+#[cfg(feature = "minimessage")]
+pub mod minimessage;
+#[cfg(feature = "minimessage")]
+#[cfg(test)]
+mod minimessage_tests;
 #[cfg(feature = "nbt")]
 pub mod nbt;
 pub mod parse;
@@ -312,6 +317,12 @@ impl<'a> RawTextComponent<'a> {
             format: Format::new(),
             interactions: Interactivity::new(),
         }
+    }
+
+    #[cfg(feature = "minimessage")]
+    pub fn minimessage(text: impl Into<&'a str>) -> RawTextComponent<'a> {
+        use crate::minimessage::Parser;
+        Parser::parse(text.into())
     }
 }
 

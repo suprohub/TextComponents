@@ -24,6 +24,7 @@ nbt = ["dep:simdnbt"]
 serde = ["dep:serde"]
 ownable = ["dep:ownable"]
 databake = ["dep:databake"]
+minimessage = ["ownable"]
 build = [
   "dep:heck",
   "dep:proc-macro2",
@@ -40,13 +41,13 @@ rand = { version = "0.10", default-features = false, features = [
 serde = { version = "1.0", features = ["derive"], optional = true }
 simdnbt = { version = "0.10", optional = true }
 uuid = { version = "1.23", features = ["v4", "serde"] }
-supports-hyperlinks = "3.2.0"
+supports-hyperlinks = "3.2"
 # Build dependencies
 heck = { version = "0.5", optional = true }
 proc-macro2 = { version = "1.0", optional = true }
 quote = { version = "1.0", optional = true }
 rustc-hash = { version = "2.1", optional = true }
-serde_json = { version = "1.0.149", optional = true }
+serde_json = { version = "1.0", optional = true }
 memchr = "2.8"
 smallvec = "1.15"
 ownable = { version = "1.0", optional = true }

@@ -81,7 +81,7 @@ set_display_builder(|component, resolutor| component.build(resolutor, PrettyText
 - [x] Terminal integration
 - [x] Serde integration
 - [x] SimdNbt integration
-- [ ] MiniMessage integration
+- [x] MiniMessage integration
 - [ ] Extensibility integration
 
 ### Test
